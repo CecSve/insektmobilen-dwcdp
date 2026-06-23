@@ -1,0 +1,238 @@
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+         packageId="https://dwcdp-ipt.gbif-test.org/resource?id=insektmobilen/v1.0" system="http://gbif.org" scope="system"
+         xml:lang="eng">
+    <dataset>
+        <title xml:lang="eng">Insektmobilen - National citizen science and DNA metabarcoding survey of flying insects in June 2018 and 2019</title>
+        <creator>
+            <individualName>
+                <givenName>Cecilie</givenName>
+                <surName>Svenningsen</surName>
+            </individualName>
+            <organizationName>Global Biodiversity Information Facility</organizationName>
+            <positionName>Data Administrator</positionName>
+            <address>
+                <city>Copenhagen</city>
+                <country>DK</country>
+            </address>
+            <electronicMailAddress>csvenningsen@gbif.org</electronicMailAddress>
+            <userId directory="https://orcid.org/">0000-0002-9216-2917</userId>
+        </creator>
+        <creator>
+            <individualName>
+                <givenName>Anders </givenName>
+                <surName>P. Tøttrup</surName>
+            </individualName>
+            <organizationName>Natural History Museum of Denmark</organizationName>
+            <positionName>Professor</positionName>
+            <address>
+                <city>Copenhagen</city>
+                <country>DK</country>
+            </address>
+            <electronicMailAddress>aptottrup@snm.ku.dk</electronicMailAddress>
+            <userId directory="https://orcid.org/">0000-0001-8776-9629</userId>
+        </creator>
+        <metadataProvider>
+            <individualName>
+                <givenName>Cecilie</givenName>
+                <surName>Svenningsen</surName>
+            </individualName>
+            <organizationName>Global Biodiversity Information Facility</organizationName>
+            <positionName>Data Administrator</positionName>
+            <address>
+                <city>Copenhagen</city>
+                <country>DK</country>
+            </address>
+            <electronicMailAddress>csvenningsen@gbif.org</electronicMailAddress>
+            <userId directory="https://orcid.org/">0000-0002-9216-2917</userId>
+        </metadataProvider>
+        <associatedParty>
+            <individualName>
+                <givenName>Isabel</givenName>
+                <surName>Calabuig</surName>
+            </individualName>
+            <organizationName>DanBIF, Danish Biodiversity Information Facility</organizationName>
+            <address>
+                <city>Copenhagen </city>
+                <country>DK</country>
+            </address>
+            <userId directory="https://orcid.org/">0000-0001-5515-7900</userId>
+            <role>distributor</role>
+        </associatedParty>
+        <pubDate>
+            2025-10-18
+        </pubDate>
+        <language>eng</language>
+        <abstract>
+            <para>The Insectmobile (Insektmobilen) is a research project at the National History Museum of Denmark, University of Copenhagen, intending to investigate the diversity of flying insects in Denmark. In the summer of 2018, 2019 and 2020, almost 400 volunteers collected flying insects using large custom-made insect nets mounted on the roof of their cars. The bulk insect samples were processed with a non-destructive DNA extraction DNA metabarcoding protocol (dx.doi.org/10.17504/protocols.io.bmunk6ve), and sequences were assigned taxonomy by importing the fasta file into GBIF's sequence ID tool (https://www.gbif.org/tools/sequence-id). The sequences were queried against a 99% clustered version of the BOLD Public Database v2024-01-06 public data (COI-5P sequences).</para>
+
+<para><emphasis>The dataset contains unidentified sequences and potential errors</emphasis>, and contaminants. For example, even though the primers used were developed as universal primers targeting freshwater insects, you will find other phyla, classes, etc. We share these sequences and associated data for the data to be as open as possible, but <emphasis>please reannotate sequences and filter the data for your specific needs before using the data for analysis</emphasis>. <emphasis>Be aware that the samples may contain identification of organisms coming from the gut content of sampled insects and other environmental DNA sources</emphasis>. Sequence identification certainty is captured in the taxonAssignmentMethod field of the Identification table, and can be interpreted as follows:</para>
+
+<para>
+    </para><para><itemizedlist>
+        <listitem><para>The <emphasis>bit score</emphasis> is the required size of a sequence database in which the current match could be found just by chance. The bit score is a log2-scaled and normalised raw score. Each increase by one doubles the required database size (2-bit score).</para></listitem>
+        <listitem><para>The <emphasis>expect value</emphasis> is a parameter that describes the number of hits one can "expect" to see by chance when searching a database of a particular size. It decreases exponentially as the match score increases. Hence, a low expect value is better.</para></listitem>
+        <listitem><para><emphasis>identity</emphasis>: How much of the query(input) sequence aligns with the match in the reference database, in percent.</para></listitem><listitem><para><emphasis>matchType</emphasis>: Badges representing different identity thresholds (match types):</para></listitem>
+    </itemizedlist></para> 
+    <para><itemizedlist>
+        <listitem><para><emphasis>Blast exact match</emphasis>: identity &gt;= 99% and queryCoverage &gt;= 80%. This is within the threshold of the OTU.&#160; &#160; &#160; &#160; </para></listitem>
+        <listitem><para><emphasis>Blast ambiguous match</emphasis>: identity &gt;= 99% and queryCoverage &gt;= 80%, but there is at least one more match with similar identity.</para></listitem>
+        <listitem><para><emphasis>Blast close match</emphasis>: identity &lt; 99% but &gt; 90% and queryCoverage &gt;= 80%. It is something close to the OTU, maybe the same genus.</para></listitem>
+        <listitem><para><emphasis>Blast weak match</emphasis>: there is a match, but with identity &lt; 90% or/and queryCoverage &lt; 80%. Depending on the quality of the sequence, bit score, identity, and expect value, a higher taxon could be inferred from this.</para></listitem><listitem><para><emphasis>Blast no match</emphasis>: no match to the reference database</para></listitem>
+    </itemizedlist></para>
+        </abstract>
+        <keywordSet>
+            <keyword>eDNA</keyword>
+            <keyword>citizen science</keyword>
+            <keyword>insects</keyword>
+            <keyword>DNA metabarcoding</keyword>
+            <keywordThesaurus>n/a</keywordThesaurus>
+        </keywordSet>
+        <intellectualRights>
+            <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC-BY 4.0) License</citetitle></ulink>.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Attribution 4.0 International</licenseName>
+            <url>https://spdx.org/licenses/CC-BY-4.0.html</url>
+            <identifier>CC-BY-4.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="information">https://insektmobilen.snm.ku.dk/</url>
+            </online>
+        </distribution>
+        <coverage>
+            <geographicCoverage>
+                <geographicDescription>Denmark</geographicDescription>
+                <boundingCoordinates>
+                    <westBoundingCoordinate>7.954</westBoundingCoordinate>
+                    <eastBoundingCoordinate>15.337</eastBoundingCoordinate>
+                    <northBoundingCoordinate>57.798</northBoundingCoordinate>
+                    <southBoundingCoordinate>54.572</southBoundingCoordinate>
+                </boundingCoordinates>
+            </geographicCoverage>
+            <temporalCoverage>
+                <rangeOfDates>
+                    <beginDate>
+                        <calendarDate>2018-06-01</calendarDate>
+                    </beginDate>
+                    <endDate>
+                        <calendarDate>2018-06-30</calendarDate>
+                    </endDate>
+                </rangeOfDates>
+            </temporalCoverage>
+            <temporalCoverage>
+                <rangeOfDates>
+                    <beginDate>
+                        <calendarDate>2019-06-01</calendarDate>
+                    </beginDate>
+                    <endDate>
+                        <calendarDate>2019-06-30</calendarDate>
+                    </endDate>
+                </rangeOfDates>
+            </temporalCoverage>
+        </coverage>
+        <acknowledgements>The data within this dataset could not have been obtained without the tremendous effort of all the citizen scientists who participated in the project. We appreciate your dedication and feedback - thank you.&#160;</acknowledgements>
+        <maintenance>
+            <description>
+                <para></para>
+            </description>
+            <maintenanceUpdateFrequency>unknown</maintenanceUpdateFrequency>
+        </maintenance>
+        <contact>
+            <individualName>
+                <givenName>Cecilie</givenName>
+                <surName>Svenningsen</surName>
+            </individualName>
+            <organizationName>Global Biodiversity Information Facility</organizationName>
+            <positionName>Data Administrator</positionName>
+            <address>
+                <city>Copenhagen</city>
+                <country>DK</country>
+            </address>
+            <electronicMailAddress>csvenningsen@gbif.org</electronicMailAddress>
+            <userId directory="https://orcid.org/">0000-0002-9216-2917</userId>
+        </contact>
+        <methods>
+            <methodStep>
+                <description>
+                    <para>Please consult the following publications and their supplementary material for more information:</para>
+                </description>
+            </methodStep>
+            <methodStep>
+                <description>
+                    <para>https://onlinelibrary.wiley.com/doi/pdf/10.1111/ddi.13532</para>
+                </description>
+            </methodStep>
+            <methodStep>
+                <description>
+                    <para> https://resjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/icad.12694</para>
+                </description>
+            </methodStep>
+            <methodStep>
+                <description>
+                    <para> https://royalsocietypublishing.org/doi/full/10.1098/rsbl.2020.0833</para>
+                </description>
+            </methodStep>
+            <methodStep>
+                <description>
+                    <para> https://www.protocols.io/view/insects-and-dna-metabarcoding-insectmobile-laborat-261ge46qdv47/v1</para>
+                </description>
+            </methodStep>
+            <sampling>
+                <studyExtent>
+                    <description>
+                        <para>Sampling was carried out in Denmark in the month of June of 2018 and 2019.</para>
+                    </description>
+                </studyExtent>
+                <samplingDescription>
+                    <para>We recruited citizen scientists to drive with car nets in close proximity to their home address in June and July 2018. The car net was funnel- shaped with a detachable sampling bag at the far end for sample collection. Metal guy- line adjusters enabled adjustment to car length and allowed the net to be used on most car types (Figure 1). The measurements of the net were as follows: front height: 75 cm; front width: 100 cm; length: 140 cm; width of sampling bag: 29 cm; mesh size at the bottom (grey fabric): 2 × 1 mm; and mesh size for the rest of the net (white fabric): ~0.3 mm. Custom tent poles (L: 209 cm, D: 8 mm) supported the opening of the net Citizen scientists were recruited by the Natural History Museum of Denmark (NHMD). The citizen scientists received a simple sampling protocol, and video tutorials and FAQ sheets along with the sampling equipment. Sampling of each route was carried out once during two time intervals on the same day: between 12 and 15 h (midday) and again between 17 and 20 h (evening) with a maximum speed of 50 km/h and weather conditions of at least 15°C, an average wind speed of maximum 6 m/s and no rain. Insects were collected in individual sampling bags that were placed in 96% pure ethanol and stored in double-sealed plastic bags before the citizen scientists sent the samples back to the research institution.</para>
+                </samplingDescription>
+            </sampling>
+            <qualityControl>
+                <description>
+                    <para>item-0item-0</para>
+                </description>
+            </qualityControl>
+        </methods>
+        <project>
+            <title>Insektmobilen</title>
+            <personnel>
+                <individualName>
+                    <givenName>Cecilie</givenName>
+                    <surName>Svenningsen</surName>
+                </individualName>
+                <userId directory="https://orcid.org/">0000-0002-9216-2917</userId>
+                <role></role>
+            </personnel>
+            <personnel>
+                <individualName>
+                    <givenName>Anders </givenName>
+                    <surName>P. Tøttrup</surName>
+                </individualName>
+                <userId directory="https://orcid.org/">0000-0001-8776-9629</userId>
+                <role></role>
+            </personnel>
+            <funding>
+                <para>This work was supported by Aage V. Jensen Naturfond.</para>
+            </funding>
+        </project>
+    </dataset>
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2025-10-18T17:17:58.130+00:00</dateStamp>
+                <hierarchyLevel>dataset</hierarchyLevel>
+                <citation>Svenningsen C, P. Tøttrup A (2025). Insektmobilen - National citizen science and DNA metabarcoding survey of flying insects in June 2018 and 2019. Version 1. Test Organization #1. Dwc-dp dataset. https://dwcdp-ipt.gbif-test.org/resource?r=insektmobilen&amp;v=1</citation>
+                <resourceLogoUrl>https://dwcdp-ipt.gbif-test.org/logo.do?r=insektmobilen</resourceLogoUrl>
+                <collection>
+                    <collectionIdentifier>https://scientific-collections.gbif.org/collection/1caa6488-5c47-4bed-8258-23155b269bd3</collectionIdentifier>
+                    <collectionName>NHMD Entomology</collectionName>
+                </collection>
+                <specimenPreservationMethod>alcohol</specimenPreservationMethod>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+</eml:eml>
